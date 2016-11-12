@@ -34,6 +34,10 @@
 #include <net/if.h>
 
 #include "config.h"
+#ifdef HAVE_SYS_QUEUE_H
+#include <sys/queue.h>
+#endif
+
 #include "defs.h"
 #include "control.h"
 #include "if-options.h"
@@ -158,7 +162,6 @@ extern const int dhcpcd_handlesigs[];
 #endif
 
 int dhcpcd_oneup(struct dhcpcd_ctx *);
-int dhcpcd_ipwaited(struct dhcpcd_ctx *);
 pid_t dhcpcd_daemonise(struct dhcpcd_ctx *);
 
 int dhcpcd_handleargs(struct dhcpcd_ctx *, struct fd_list *, int, char **);

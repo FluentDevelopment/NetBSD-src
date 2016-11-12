@@ -110,6 +110,8 @@
 #define DHCPCD_PFXDLGMIX		(1ULL << 53)
 #define DHCPCD_IPV6RA_AUTOCONF		(1ULL << 54)
 
+#define DHCPCD_WAITOPTS (DHCPCD_WAITIP | DHCPCD_WAITIP4 | DHCPCD_WAITIP6)
+
 extern const struct option cf_options[];
 
 struct if_sla {

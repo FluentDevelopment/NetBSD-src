@@ -67,6 +67,7 @@ void ipv4_sortinterfaces(struct dhcpcd_ctx *);
 uint8_t inet_ntocidr(struct in_addr);
 int inet_cidrtoaddr(int, struct in_addr *);
 uint32_t ipv4_getnetmask(uint32_t);
+int ipv4_ifaddrexists(const struct interface *);
 int ipv4_addrexists(struct dhcpcd_ctx *, const struct in_addr *);
 
 #define STATE_ADDED		0x01
@@ -94,7 +95,7 @@ void ipv4_ctxfree(struct dhcpcd_ctx *);
 #define ipv4_freeroutes(a) {}
 #define ipv4_free(a) {}
 #define ipv4_ctxfree(a) {}
-#define ipv4_addrexists(a, b) (0)
+#define ipv4_ifaddrexists(a) (0)
 #endif
 
 #endif
